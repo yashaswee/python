@@ -10,7 +10,19 @@ food.write('milk\n')
 food.close()
 
 file =open("foods.txt", "r")
-#print(file.read())
+print(file.read())
+file.close
 
-line=open(file).read().splitlines()
-print(line)
+file1=open("foods.txt", 'r')
+lines=list(file1)
+value=random.choices(lines)
+print(type(value))
+print(value)
+print("====")
+print(lines)
+file1.close()
+
+print(', '.join(value))
+
+#line=open(file).read().splitlines()
+#print(line)
